@@ -1,0 +1,18 @@
+.Navbar {
+	border-bottom: 1px lightgray solid;
+	background-color: white;
+	padding: 10px;
+}
+img {
+	width: 25vw;
+}
+
+.nav {
+	display: inline-block;
+}
+
+.item {
+	display: inline-block;
+	margin: 0;
+	padding-left: 10px;
+}
