@@ -1,0 +1,23 @@
+
+.AddProperty {
+	/* background-image: url("https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"); */
+	padding: -40px;
+	height: 100vh;
+}
+
+.addForm {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+	background-color: rgba(255, 255, 255, 0.5);
+	width: 50vw;
+}
+
+.imgflat {
+	margin: -30px 0px 0px -30px;
+}
+
+.input {
+	margin-right: 30px;
+}

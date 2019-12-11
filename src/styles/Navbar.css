@@ -1,18 +1,18 @@
 .Navbar {
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
-	border-bottom: 1px lightgray solid;
-	background-color: white;
+	justify-content: flex-end;
+	align-content: center;
+	/* border-bottom: 1px lightgray solid; */
+	/* background-color: rgba(255, 255, 255, 0.5); */
 	padding: 10px;
 }
 .logo {
 	width: 25vw;
+	justify-self: flex-start;
 }
 
-.nav {
-	display: inline-block;
-}
+
 
 .item {
 	display: inline-block;
