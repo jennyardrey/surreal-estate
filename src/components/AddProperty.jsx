@@ -34,8 +34,11 @@ class AddProperty extends Component {
 	}
 
 	render() {
+
 		return <div className="AddProperty">
+
 			<form className="addForm" onSubmit={this.handleAddProperty}>
+
 				<div className="input">Listing title:</div>
 				<input className="input" type="text" name="title" onChange={this.handleFieldChange}></input>
 
@@ -70,6 +73,7 @@ class AddProperty extends Component {
 			</form>
 
 		</div >
+
 	}
 };
 
