@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/AddProperty.css'
+import Axios from 'axios'
+import Alert from './Alert.jsx'
 
 class AddProperty extends Component {
 	constructor(props) {
@@ -13,14 +15,38 @@ class AddProperty extends Component {
 				bathrooms: 0,
 				price: 0,
 				email: '',
+			},
+			status: {
+				alertMessage: '',
+				isSuccess: false,
+				isError: false,
 			}
 		}
 	}
 
 	handleAddProperty = (event) => {
 		event.preventDefault();
-		console.log(this.state.fields)
-
+		this.setState({
+			status: {
+				alertMessage: '',
+				isSuccess: false,
+				isError: false,
+			}
+		})
+		Axios.post("http://localhost:3000/api/v1/PropertyListing/", this.state.fields)
+			.then(
+				this.setState({
+					alertMessage: 'Your property has been added!',
+					isSuccess: true,
+				})
+			)
+			.catch((err) => {
+				this.setState({
+					alertMessage: 'There was an error!',
+					isError: true,
+				})
+			}
+			)
 	}
 
 	handleFieldChange = (event) => {
@@ -38,7 +64,8 @@ class AddProperty extends Component {
 		return <div className="AddProperty">
 
 			<form className="addForm" onSubmit={this.handleAddProperty}>
-
+				{this.state.isSuccess && <Alert message={this.state.alertMessage} success />}
+				{this.state.isError && <Alert message={this.state.alertMessage} success />}
 				<div className="input">Listing title:</div>
 				<input className="input" type="text" name="title" onChange={this.handleFieldChange}></input>
 
