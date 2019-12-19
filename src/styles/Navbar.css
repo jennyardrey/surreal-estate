@@ -1,7 +1,7 @@
 .Navbar {
 	display: flex;
 	flex-direction: row;
-	justify-content: flex-end;
+	justify-content: space-between;
 	align-content: center;
 	/* border-bottom: 1px lightgray solid; */
 	/* background-color: rgba(255, 255, 255, 0.5); */

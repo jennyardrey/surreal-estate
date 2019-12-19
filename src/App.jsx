@@ -3,7 +3,7 @@ import './styles/App.css'
 import Navbar from './components/Navbar.jsx'
 import { Route, Switch } from 'react-router-dom';
 import Properties from './components/Properties.jsx';
-import AddProperty from './components/AddProperty';
+import AddProperty from './components/AddProperty'; { }
 
 class App extends Component {
 	render() {

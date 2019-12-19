@@ -1,0 +1,12 @@
+.properties {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.error {
+	font-size: 50px;
+	color: red;
+	align-content: center;
+}
