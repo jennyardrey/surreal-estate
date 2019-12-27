@@ -5,4 +5,55 @@
 	margin: 20px;
 	display: flex;
 	flex-direction: column;
+	
+}
+
+.title {
+	font-weight: 1000;
+	padding: 5px;
+}
+
+.type {
+	font-style: oblique;
+	padding: 5px;
+}
+
+.bedrooms {
+	padding: 5px;
+}
+
+.bathrooms {
+	padding: 5px;
+}
+
+.city {
+	padding: 5px;
+}
+
+.price {
+	padding: 5px;
+	font-size: 20px;
+}
+
+.email {
+	background-color: white;
+	width: 45%;
+	text-align: center;
+	border-radius: 5px;
+}
+
+.save {
+	background-color: white;
+	width: 45%;
+	text-align: center;
+	border-radius: 5px;
+}
+
+a {
+	color: black;
+}
+
+.buttons {
+	display: flex;
+	justify-content: space-evenly;
 }
