@@ -11,6 +11,7 @@ class Properties extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+
 			results: [],
 			error: false,
 			searchTerm: "",
@@ -73,6 +74,14 @@ class Properties extends Component {
 		console.log('hello', newQueryString, userID);
 	}
 
+	handleSaveProperty = (propertyId) => {
+		const { userID } = this.props;
+		Axios.post('http://localhost:3000/api/v1/Favourite', {
+			propertyListing: propertyId,
+			fbUserId: userID,
+		});
+	}
+
 	render() {
 		return <div className="property-page">
 
@@ -94,7 +103,7 @@ class Properties extends Component {
 			<div className="properties">
 				{this.state.results && this.state.results.length > 0 ?
 					this.state.results.map(property => (
-						<PropertyCard userID={this.props.userID} key={property._id}
+						<PropertyCard userID={this.props.userID} handleSave={this.handleSaveProperty} key={property._id}
 							{...property} />
 					)) : <div className="error">Error!</div>
 				}

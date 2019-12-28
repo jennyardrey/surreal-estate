@@ -12,13 +12,13 @@ const PropertyCard = (props) => {
 		price,
 		email,
 		userID,
-		onSaveProperty,
+		handleSave,
 	} = props;
 
 	let saveButton;
 	if (userID) {
 		saveButton =
-			(<button className="save">Save <i class="fas fa-heart"></i></button>)
+			(<button className="save" onClick={() => handleSave(_id)}>Save <i class="fas fa-heart"></i></button>)
 	}
 
 	return (
