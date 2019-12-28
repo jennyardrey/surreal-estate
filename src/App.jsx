@@ -32,6 +32,8 @@ class App extends Component {
 	};
 
 
+
+
 	render() {
 		return (
 			<div>
@@ -44,10 +46,11 @@ class App extends Component {
 					email={this.state.email}
 					picture={this.state.picture} />
 				<Switch>
-					<Route exact path="/"
-						component={Properties}
-						render={(props) => <Properties {...props}
-							userId={this.state.userID} />} />
+					<Route
+						exact path="/"
+
+						render={props => <Properties {...props} userID={this.state.userID} />}
+					/>
 					<Route exact path="/add-property"
 						component={AddProperty} />
 				</Switch>

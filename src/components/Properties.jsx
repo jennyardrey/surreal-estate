@@ -68,9 +68,9 @@ class Properties extends Component {
 		// const { search } = this.state;
 
 		const newQueryString = this.buildQueryString('query', { title: { $regex: this.state.searchTerm } })
-		const { history } = this.props;
+		const { history, userID } = this.props;
 		history.push(newQueryString);
-		console.log('hello', newQueryString);
+		console.log('hello', newQueryString, userID);
 	}
 
 	render() {
