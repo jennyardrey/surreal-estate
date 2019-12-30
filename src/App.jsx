@@ -4,6 +4,7 @@ import Navbar from './components/Navbar.jsx'
 import { Route, Switch } from 'react-router-dom';
 import Properties from './components/Properties.jsx';
 import AddProperty from './components/AddProperty';
+import Favourites from './components/Favourites'
 
 class App extends Component {
 	constructor(props) {
@@ -53,6 +54,8 @@ class App extends Component {
 					/>
 					<Route exact path="/add-property"
 						component={AddProperty} />
+					<Route exact path="/favourites"
+						component={Favourites} />
 				</Switch>
 
 			</div>

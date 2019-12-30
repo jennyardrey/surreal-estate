@@ -36,11 +36,6 @@ const PropertyCard = (props) => {
 				<span className="email">Email <a href={`mailto:${email}?Subject=${title}`} target="_top"><i class="fas fa-envelope"></i></a></span>
 				{saveButton}</div>
 
-
-
-
-
-
 		</div >
 	)
 }

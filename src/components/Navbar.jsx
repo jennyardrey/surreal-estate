@@ -29,6 +29,7 @@ const Navbar = ({ onLogin, name, onLogout, userID, picture }) => {
 			<img className="logo" src="https://mcrcodes.s3.eu-west-2.amazonaws.com/course/surreal-estate/logo.png" alt="logo"></img>
 			<Link className="item" to="/"> View Properties </Link>
 			<Link className="item" to="/add-property">Add a Property </Link>
+			<Link className="item" to="/favourites">Favourites </Link>
 			<span>{loginButton}</span>
 
 		</ul>

@@ -76,7 +76,7 @@ class Properties extends Component {
 
 	handleSaveProperty = (propertyId) => {
 		const { userID } = this.props;
-		Axios.post('http://localhost:3000/api/v1/Favourite', {
+		Axios.post('http://localhost:3000/api/v1/Favourite?populate=propertyListing', {
 			propertyListing: propertyId,
 			fbUserId: userID,
 		});
