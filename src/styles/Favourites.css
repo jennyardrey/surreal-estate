@@ -1,7 +1,6 @@
-.properties {
-
-	padding-top: 80px;
-	padding-left: 205px;
+.favourites {
+margin: 0px 10px 0px 20px;
+	padding-top: 150px;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -13,21 +12,3 @@
 	color: red;
 	align-content: center;
 }
-
-.sidebar {
-	display: flex;
-	flex-direction: column;
-margin-top: 68px;
-		margin-left: 0;
-		padding: 0px 10px 0px 10px;
-		width: 200px;
-		background-color: rgba(255, 255, 255);
-		position: fixed;
-		height: 100%;
-		overflow: auto;
-	}
-
-.search-button {
-		width: 50%;
-		
-	}

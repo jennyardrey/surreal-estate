@@ -17,11 +17,11 @@
 .sidebar {
 	display: flex;
 	flex-direction: column;
-margin-top: 68px;
+margin-top: 97px;
 		margin-left: 0;
 		padding: 0px 10px 0px 10px;
 		width: 200px;
-		background-color: rgba(255, 255, 255);
+		background-color: rgba(255, 255, 255, 0.5);
 		position: fixed;
 		height: 100%;
 		overflow: auto;

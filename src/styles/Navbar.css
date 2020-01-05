@@ -2,13 +2,19 @@
 	position: fixed;
 	display: flex;
 	flex-direction: row;
-	/* justify-content: space-between; */
+	justify-content: space-between;
 	align-content: center;
+	align-items: center;
 	/* border-bottom: 1px lightgray solid; */
 	/* background-color: rgba(255, 255, 255, 0.5); */
 	margin: 0;
-	background-color: rgba(255, 255, 255);
+	background-color: rgba(255, 255, 255, 0.5);
 	width: 100%;
+
+}
+
+ul {
+	padding-inline-start: 0px;
 }
 .logo {
 	
@@ -19,12 +25,14 @@
 
 
 .item {
-	display: inline-block;
+	/* display: inline-block; */
 	margin: 0;
 	padding: 2px 10px 5px 10px;
 	text-decoration: none;
 	border-radius: 20px;
 	color: white;
+	height: fit-content;
+
 }
 
 .item:hover {

@@ -5,9 +5,12 @@ import '../styles/FaveCards.css'
 class FaveCards extends Component {
 	constructor(props) {
 		super(props);
+
 		this.state = {
 			favourite: [],
+			// success: false,
 		}
+
 	}
 
 	componentDidMount() {
@@ -22,9 +25,15 @@ class FaveCards extends Component {
 	}
 
 
+
+
 	render() {
-		return <div className="faveCard">
-			<span>{this.state.favourite.title}</span><span><button input="button">Delete</button></span>
+
+		return <div className="favourite-card">
+			<span className="title">{this.state.favourite.title}</span>
+			<span className="image"><img src="http://placeimg.com/300/200/arch" alt="property"></img></span>
+			<span className="view-link"><button>View Property</button></span>
+			<span className="delete-btn"><button input="button" onClick={() => this.props.handleDelete(this.props._id)}>Delete</button></span>
 		</div>
 
 

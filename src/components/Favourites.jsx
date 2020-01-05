@@ -3,6 +3,7 @@ import PropertyCard from './PropertyCard';
 import Axios from 'axios';
 import '../styles/Favourites.css';
 import FaveCards from './FaveCards';
+import { Link } from 'react-router-dom'
 
 
 class Favourites extends Component {
@@ -11,7 +12,7 @@ class Favourites extends Component {
 		this.state = {
 
 			results: [],
-			error: false,
+			success: false,
 			favourites: [],
 		}
 	}
@@ -24,14 +25,27 @@ class Favourites extends Component {
 			})
 	}
 
+	handleDelete = (_id) => {
+		console.log(_id);
+		Axios.delete(`http://localhost:3000/api/v1/Favourite/${_id}`)
+			.then(
+				this.setState({
+					results: this.state.results.filter(property => property._id !== _id),
+				})
+			)
+			.catch(console.log('Error'))
+	}
+
+
 	render() {
 		return (
 			<div className="favourites">
 				{this.state.results && this.state.results.length > 0 ?
 					this.state.results.map(property => (
 						<FaveCards userID={this.props.userID} key={property._id}
-							{...property} />
-					)) : <div className="error">Error!</div>}
+							{...property} handleDelete={this.handleDelete} />
+					)) : <div className="error">You currently have no favourites saved. Head over to the
+					<Link className="Properties-link" to="/">Properties Page</Link> to browse our properties.</div>}
 			</div>
 		)
 	}
