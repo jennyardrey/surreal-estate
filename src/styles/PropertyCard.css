@@ -58,3 +58,10 @@ a {
 	display: flex;
 	justify-content: space-evenly;
 }
+
+.grow {
+	transition: all .1s ease-in-out;
+}
+.grow:hover {
+	transform: scale(1.1);
+}

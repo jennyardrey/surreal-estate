@@ -25,7 +25,7 @@ const PropertyCard = (props) => {
 
 	return (
 
-		< div className="propertyCard" >
+		< div className="propertyCard grow" >
 			{/* <div>{image = }</div> */}
 			<span className="img"><img src={data[Math.floor(Math.random() * data.length)]} alt="property" width="300px" height="200px"></img></span>
 			<span className="title">{title}</span>
@@ -35,7 +35,7 @@ const PropertyCard = (props) => {
 			<span className="city"><i class="fas fa-map-marker-alt"></i> {city}</span>
 			<span className="price">£{price}</span>
 			<div className="buttons">
-				<span className="email">Email <a href={`mailto:${email}?Subject=${title}`} target="_top"><i class="fas fa-envelope"></i></a></span>
+				<span className="email"><a href={`mailto:${email}?Subject=${title}`} target="_top">Email <i class="fas fa-envelope"></i></a></span>
 				{saveButton}</div>
 
 		</div >
