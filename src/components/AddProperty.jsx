@@ -69,7 +69,7 @@ class AddProperty extends Component {
 				<div className="input">Listing title:</div>
 				<input className="input" type="text" name="title" onChange={this.handleFieldChange}></input>
 
-				<div className="input">Lising type:</div>
+				<div className="input">Listing type:</div>
 				<select className="input" name="type" onChange={this.handleFieldChange}>
 					<option value="Flat">Flat</option>
 					<option value="Detached">Detached</option>
@@ -87,11 +87,11 @@ class AddProperty extends Component {
 					<option value="Hull">Hull</option>
 				</select>
 
-				<div className="input">No. of bedrooms:</div><input className="input" type="text" name="bedrooms" onChange={this.handleFieldChange}></input>
+				<div className="input">No. of bedrooms:</div><input className="input" type="number" name="bedrooms" onChange={this.handleFieldChange}></input>
 
-				<div className="input">No. of bathrooms:</div><input className="input" type="text" name="bathrooms" onChange={this.handleFieldChange}></input>
+				<div className="input">No. of bathrooms:</div><input className="input" type="number" name="bathrooms" onChange={this.handleFieldChange}></input>
 
-				<div className="input">Price:</div><input className="input" type="text" name="price" onChange={this.handleFieldChange}></input>
+				<div className="input">Price in £:</div><input className="input" type="number" name="price" onChange={this.handleFieldChange}></input>
 
 				<div className="input">Contact email:</div><input className="input" type="text" name="email" onChange={this.handleFieldChange}></input>
 

@@ -8,16 +8,19 @@
 	/* border-bottom: 1px lightgray solid; */
 	/* background-color: rgba(255, 255, 255, 0.5); */
 	margin: 0;
-	background-color: rgba(255, 255, 255, 0.5);
+	background-color: rgba(255, 255, 255);
 	width: 100%;
-
+height: 10vh;
 }
 
+.fb-logout-bt {
+	height: 10vh;
+}
 ul {
 	padding-inline-start: 0px;
 }
 .logo {
-	
+	height: 10vh;
 	width: 200px;
 	justify-self: flex-start;
 }
@@ -48,9 +51,14 @@ ul {
 
 .fb-logout-btn {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	align-items: center;
 	background-color: rgb(76,105,186);
 	color: white;
 	font-size: large;
+	height: 10vh;
+}
+
+.fb-logout-btn:hover {
+cursor: pointer;
 }

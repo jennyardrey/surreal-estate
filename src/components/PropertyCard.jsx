@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/PropertyCard.css'
+import data from '../data/images.json'
 
 const PropertyCard = (props) => {
 	const {
@@ -14,6 +15,7 @@ const PropertyCard = (props) => {
 		userID,
 		handleSave,
 	} = props;
+	let image;
 
 	let saveButton;
 	if (userID) {
@@ -23,9 +25,9 @@ const PropertyCard = (props) => {
 
 	return (
 
-		<div className="propertyCard">
-
-			<span className="img"><img src="http://placeimg.com/300/200/arch" alt="property"></img></span>
+		< div className="propertyCard" >
+			{/* <div>{image = }</div> */}
+			<span className="img"><img src={data[Math.floor(Math.random() * data.length)]} alt="property" width="300px" height="200px"></img></span>
 			<span className="title">{title}</span>
 			<span className="type"><i class="fas fa-home"></i> {type}</span>
 			<span className="bedrooms"><i class="fas fa-bed"></i> {bedrooms}</span>

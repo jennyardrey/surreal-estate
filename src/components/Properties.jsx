@@ -18,6 +18,7 @@ class Properties extends Component {
 		}
 	}
 	componentDidMount() {
+		console.log(this.props.favourites)
 		Axios.get(`http://localhost:3000/api/v1/PropertyListing/`)
 			.then(response => {
 				return this.setState({
@@ -75,11 +76,17 @@ class Properties extends Component {
 	}
 
 	handleSaveProperty = (propertyId) => {
-		const { userID } = this.props;
-		Axios.post('http://localhost:3000/api/v1/Favourite?populate=propertyListing', {
-			propertyListing: propertyId,
-			fbUserId: userID,
-		});
+		const { userID, favourites } = this.props;
+		if (!favourites.includes(propertyId)) {
+			Axios.post('http://localhost:3000/api/v1/Favourite', {
+				propertyListing: propertyId,
+				fbUserId: userID,
+			})
+				.then(favourites.push(propertyId))
+				.catch(err => console.log(err))
+		} else {
+			alert('You have already added this property to your favourites')
+		}
 	}
 
 	render() {

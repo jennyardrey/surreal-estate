@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
 import '../styles/FaveCards.css'
+import PropertyDetail from './PropertyDetail'
+import data from '../data/images.json'
 
 class FaveCards extends Component {
 	constructor(props) {
@@ -8,7 +10,7 @@ class FaveCards extends Component {
 
 		this.state = {
 			favourite: [],
-			// success: false,
+			active: false,
 		}
 
 	}
@@ -24,6 +26,20 @@ class FaveCards extends Component {
 			)
 	}
 
+	seeMore = () => {
+		this.setState({
+			active: true,
+		})
+		console.log(this.state.active)
+	}
+
+	seeLess = () => {
+		this.setState({
+			active: false,
+		})
+		console.log(this.state.active)
+	}
+
 
 
 
@@ -31,9 +47,17 @@ class FaveCards extends Component {
 
 		return <div className="favourite-card">
 			<span className="title">{this.state.favourite.title}</span>
-			<span className="image"><img src="http://placeimg.com/300/200/arch" alt="property"></img></span>
-			<span className="view-link"><button>View Property</button></span>
-			<span className="delete-btn"><button input="button" onClick={() => this.props.handleDelete(this.props._id)}>Delete</button></span>
+			<span className="image"><img src={data[Math.floor(Math.random() * data.length)]} alt="property" width="300px" height="200px"></img></span>
+
+
+			<span className="delete-btn"><button input="button" onClick={() => this.props.handleDelete(this.props._id)}>Remove from favourites</button></span>
+
+			{this.state.active && this.state.active === true ?
+
+				<PropertyDetail key={this.props._id}
+					{...this.state.favourite} seeLess={this.seeLess} />
+				: <span className="see-more"><button onClick={this.seeMore}>Show More...</button></span>
+			}
 		</div>
 
 

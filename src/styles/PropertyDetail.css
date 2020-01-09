@@ -1,0 +1,15 @@
+
+.PropertyDetail {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.description {
+	font-size: 20px;
+	padding: 10px;
+}
+
+.map {
+	padding: 10px;
+}

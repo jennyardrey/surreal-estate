@@ -17,12 +17,18 @@ class Favourites extends Component {
 		}
 	}
 	componentDidMount() {
-		Axios.get(`http://localhost:3000/api/v1/Favourite/`)
-			.then(response => {
-				this.setState({
-					results: response.data,
+		console.log(this.props.userID)
+		if (this.props.userID) {
+			Axios.get(`http://localhost:3000/api/v1/Favourite/`)
+				.then(response => {
+					this.setState({
+						results: response.data,
+					})
 				})
-			})
+				.catch(err => console.log(err))
+		} else {
+			return <div className="no-faves">Please log in to view you favourites</div>
+		}
 	}
 
 	handleDelete = (_id) => {

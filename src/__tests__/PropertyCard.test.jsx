@@ -33,7 +33,7 @@ it('renders the type', () => {
 		city="Hull"
 		email="test@email.com" />)
 	const text = wrapper.find('.type').text();
-	expect(text).toEqual('Flat');
+	expect(text).toEqual(' Flat');
 })
 
 it('renders the bathroom', () => {
@@ -46,7 +46,7 @@ it('renders the bathroom', () => {
 		city="Hull"
 		email="test@email.com" />)
 	const text = wrapper.find('.bathrooms').text();
-	expect(text).toEqual("1 bathroom(s)");
+	expect(text).toEqual(" 1");
 })
 
 it('renders the bedrooms', () => {
@@ -59,7 +59,7 @@ it('renders the bedrooms', () => {
 		city="Hull"
 		email="test@email.com" />)
 	const text = wrapper.find('.bedrooms').text();
-	expect(text).toEqual('2 bedroom(s)');
+	expect(text).toEqual(' 2');
 })
 
 it('renders the price', () => {
@@ -85,7 +85,7 @@ it('renders the city', () => {
 		city="Hull"
 		email="test@email.com" />)
 	const text = wrapper.find('.city').text();
-	expect(text).toEqual('Hull');
+	expect(text).toEqual(' Hull');
 })
 
 it('renders the email', () => {
@@ -98,5 +98,5 @@ it('renders the email', () => {
 		city="Hull"
 		email="test@email.com" />)
 	const text = wrapper.find('.email').text();
-	expect(text).toEqual('Contact: test@email.com');
+	expect(text).toEqual('Email ');
 })

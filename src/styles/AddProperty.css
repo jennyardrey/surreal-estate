@@ -1,7 +1,7 @@
 
 .AddProperty {
 	/* background-image: url("https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"); */
-	padding: -40px;
+	/* padding: -40px; */
 	height: 100vh;
 }
 .description {
@@ -12,16 +12,16 @@
 }
 
 .addForm {
-	margin-top: 80px;
-	padding: 20px;
+	margin: 0 auto;
+	padding: 90px 30px;
 	color: black;
 	font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-	float: right;
+	/* float: right; */
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: flex-end;
-	background-color: rgba(255, 255, 255, 0.5);
+	align-items: center;
+	/* background-color: rgba(255, 255, 255); */
 	width: 50vw;
 }
 

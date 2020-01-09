@@ -5,6 +5,7 @@
 	margin: 20px;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 }
 
 .title {
@@ -20,4 +21,8 @@
 .delete-btn {
 	text-align: center;
 	border-radius: 5px;
+}
+
+.see-more {
+	margin: 0 auto;
 }
