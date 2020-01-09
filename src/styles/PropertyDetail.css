@@ -21,22 +21,26 @@
 	background: white;
 	padding: 10px;
 	justify-content: center;
+	height: fit-content;
 }
 
 .prop-fave-card {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	align-items: center;
 	
 
 }
 
 .prop-detail {
-
+width: 100%;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
 	height: fit-content;
+	justify-content: space-around;
+
 }
 .title {
 font-size: 30px;

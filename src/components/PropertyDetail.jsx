@@ -23,10 +23,10 @@ const PropertyDetail = (props) => {
 			<div className="prop-fave-card">
 				<span className="title">{title}</span>
 				<div className="prop-detail">
-					<span className="item-detail type"><i class="fas fa-home">{type}</i></span>
-					<span className="item-detail bedrooms"><i class="fas fa-bed">{bedrooms}</i></span>
-					<span className="item-detail bathrooms"><i class="fas fa-bath">{bathrooms}</i></span>
-					<span className="item-detail city"><i class="fas fa-map-marker-alt">{city}</i></span>
+					<span className="item-detail type"><i class="fas fa-home"> {type}</i></span>
+					<span className="item-detail bedrooms"><i class="fas fa-bed"> {bedrooms}</i></span>
+					<span className="item-detail bathrooms"><i class="fas fa-bath"> {bathrooms}</i></span>
+					<span className="item-detail city"><i class="fas fa-map-marker-alt"> {city}</i></span>
 					<span className="item-detail price">£{price}</span>
 				</div>
 				<span className="description">Lorem ipsum dolor sit amet, consectetur adipiscing

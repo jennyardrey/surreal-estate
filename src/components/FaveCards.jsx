@@ -32,12 +32,12 @@ class FaveCards extends Component {
 
 	render() {
 		const { seeMore } = this.props;
-		return <div className="favourite-card">
+		return <div className="favourite-card grow">
 			<span className="title">{this.state.favourite.title}</span>
 			<span className="image"><img src={data[Math.floor(Math.random() * data.length)]} alt="property" width="300px" height="200px"></img></span>
 			<span className="delete-btn"><button input="button" onClick={() => this.props.handleDelete(this.props._id)}>Remove from favourites</button></span>
 			<span className="see-more"><button onClick={() => seeMore(this.state.favourite)}>Show More...</button></span>
-			}
+
 		</div>
 
 

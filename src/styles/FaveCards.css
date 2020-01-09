@@ -6,6 +6,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	box-shadow: 5px 5px 10px gray;
 }
 
 .title {
@@ -25,4 +26,11 @@
 
 .see-more {
 	margin: 0 auto;
+}
+
+.grow {
+	transition: all .1s ease-in-out;
+}
+.grow:hover {
+	transform: scale(1.1);
 }
