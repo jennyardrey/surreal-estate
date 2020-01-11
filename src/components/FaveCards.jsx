@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
 import '../styles/FaveCards.css'
-import PropertyDetail from './PropertyDetail'
 import data from '../data/images.json'
 
 class FaveCards extends Component {

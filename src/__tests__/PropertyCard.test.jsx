@@ -1,5 +1,5 @@
 import PropertyCard from '../components/PropertyCard.jsx'
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import React from 'react';
 
 it('renders without crashing', () => {
@@ -99,4 +99,14 @@ it('renders the email', () => {
 		email="test@email.com" />)
 	const text = wrapper.find('.email').text();
 	expect(text).toEqual('Email ');
+})
+
+it('runs the handleSave function when the button is clicked', () => {
+	const props = {
+		handleSave: jest.fn(),
+		userID: true,
+	};
+	const wrapper = mount(<PropertyCard {...props} />);
+	wrapper.find('button').simulate('click');
+	expect(props.handleSave).toHaveBeenCalled();
 })

@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import PropertyCard from './PropertyCard';
 import Axios from 'axios';
 import '../styles/Favourites.css';
 import FaveCards from './FaveCards';
-import { Link } from 'react-router-dom'
 import PropertyDetail from './PropertyDetail';
 
 
@@ -45,7 +43,7 @@ class Favourites extends Component {
 			.catch(console.log('Error'))
 	}
 	seeMore = (fave) => {
-		console.log(fave)
+		console.log(this.state.currentFave)
 		this.setState({
 			showPopup: true,
 			currentFave: fave,
@@ -69,7 +67,7 @@ class Favourites extends Component {
 							<FaveCards userID={this.props.userID} key={property._id}
 								{...property} handleDelete={this.handleDelete} seeMore={this.seeMore} seeLess={this.seeLess} />
 						)) : <div className="error">You currently have no favourites saved. Head over to the
-					<Link className="Properties-link" to="/">Properties Page</Link> to browse our properties.</div>}
+					Properties Page to browse our properties.</div>}
 				</div>
 				<div className="popup">
 					{this.state.showPopup ?

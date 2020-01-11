@@ -5,7 +5,7 @@ import "../styles/PropertyDetail.css"
 const PropertyDetail = (props) => {
 	console.log(props.title)
 	const {
-		_id,
+
 		title,
 		type,
 		city,
